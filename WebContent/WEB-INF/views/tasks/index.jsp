@@ -7,7 +7,7 @@
             <ul>
                 <li>
                     <c:out value="${task.toDo}"/> &gt; <c:out value="${task.deadline}"/><br>
-                    <a href="${pageContext.request.contextPath}/show?id=${task.id}">このタスク詳細へ</a>
+                    <a href="${pageContext.request.contextPath}/show?id=${task.id}">タスク詳細へ</a>
 
                 </li>
             </ul>
