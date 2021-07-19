@@ -9,7 +9,7 @@
 <br><br>
 
 <label for="deadline">締め切り</label><br>
-<input type="datetime-local" name="deadline" value="${task.deadline}"/>
+<input type="datetime-local" name="deadline"  value="${task.deadline}"/>
 <br><br>
 
 <input type="hidden" name="_token" value="${_token}"/>

@@ -10,6 +10,7 @@
         <p>詳細：<c:out value="${task.detail}"></c:out></p>
         <p><fmt:formatDate value="${task.deadline}" pattern="yyyy-MM-dd HH:mm"/></p>
 
+        <p><a href="${pageContext.request.contextPath}/edit?id=${task.id}">タスク内容の編集</a></p>
         <p><a href="${pageContext.request.contextPath}/index">タスク一覧に戻る</a></p>
     </c:param>
 </c:import>
