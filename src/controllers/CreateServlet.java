@@ -56,13 +56,14 @@ public class CreateServlet extends HttpServlet {
                 t.setDeadline(deadline);
             } catch (ParseException e) {
                 e.printStackTrace();
-            } finally {
-                em.persist(t);
-                em.getTransaction().commit();
                 em.close();
-
-                response.sendRedirect(request.getContextPath() + "/index");
             }
+
+            em.persist(t);
+            em.getTransaction().commit();
+            em.close();
+
+            response.sendRedirect(request.getContextPath() + "/index");
         }
     }
 
