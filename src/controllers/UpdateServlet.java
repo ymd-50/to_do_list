@@ -50,6 +50,9 @@ public class UpdateServlet extends HttpServlet {
             String detail = request.getParameter("detail");
             t.setDetail(detail);
 
+            Timestamp update_at = new Timestamp(System.currentTimeMillis());
+            t.setUpdate_at(update_at);
+
             try {
                 Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm").parse(request.getParameter("deadline"));
                 Timestamp deadline = new Timestamp(date.getTime());

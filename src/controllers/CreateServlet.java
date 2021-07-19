@@ -49,6 +49,10 @@ public class CreateServlet extends HttpServlet {
             String detail = request.getParameter("detail");
             t.setDetail(detail);
 
+            Timestamp currentTime = new Timestamp(System.currentTimeMillis());
+            t.setCreate_at(currentTime);
+            t.setUpdate_at(currentTime);
+
 
             try {
                 Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm").parse(request.getParameter("deadline"));
